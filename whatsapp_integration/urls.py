@@ -1,6 +1,7 @@
+# employee_register/urls.py
 from django.urls import path
-from . import views
+from .views import incoming_whatsapp_message
 
 urlpatterns = [
-    path('webhook/', views.receive_whatsapp_message, name='whatsapp_webhook'),
+    path('whatsapp/', incoming_whatsapp_message, name='incoming_whatsapp'),
 ]
